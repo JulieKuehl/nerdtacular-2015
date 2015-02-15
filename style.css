@@ -1,0 +1,107 @@
+/*
+Theme Name: Nerdtacular (Conference Child Theme)
+Theme URI: http: //cr3ativ.com/
+Description: This is a custom child theme for the Conference theme created for Nerdtacular.com.
+Author: Julie Kuehl
+Author URI: http: //juliekuehl.com/
+Template: conference-wp
+Version: 2015.1
+*/
+
+/* ----- REMINDER: Speaker images should be 650px x 650px for best results ----- */
+
+@import url("../conference-wp/style.css");
+
+
+/* ----- background behind page headings to make them legible ----- */
+.main_content > h1 {
+    background: rgba(73,89,109,0.7);
+    color: #ffffff;
+}
+
+/* ----- changes color of the WHEN / WHERE / WHY section ----- */
+.one_third_home {
+    color: #A4C04B;
+}
+
+/* ----- fix to prevent layout from breaking when speakers have different amounts of info ----- */
+.speakerwidgetwrapper .speakerwidget {
+    min-height: 350px;
+}
+
+/* ----- adds background color to the newsletter widget area ----- */
+#footer_widget_wrapper {
+    background: rgba(73,89,109,0.7);
+}
+
+/* ----- styling for the Gravity Forms newsletter widget ----- */
+#footer_widget .textwidget p {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#gform_wrapper_1 {
+    max-width: 75% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gform_body,
+.gform_footer {
+    display: inline-block !important;
+}
+
+.gform_body {
+    margin-right: 1em;
+    width: 79%;
+}
+
+.gform_wrapper .top_label .gfield_label {
+    display: none !important;
+}
+
+/* ----- styling for the Gravity Forms sponsorship page ----- */
+#gform_fields_2 input[type=text] {
+    line-height: 19px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.gform_wrapper .gform_footer.left_label {
+    display: block !important;
+    padding: 1em 0 0.625em 0 !important;
+}
+
+/* ----- code for mobile devices display ----- */
+@media only screen and (max-width: 1024px) {
+    #gform_wrapper_1 {
+        max-width: 100% !important;
+    }
+
+    .gform_body {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .gform_footer,
+    #footer_widget .textwidget input[type=submit] {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .gform_wrapper .top_label .gfield_label {
+        display: none !important;
+    }
+
+    .home_widget6 a {
+        color: #A4C04B;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .speakerwidgetwrapper .speakerwidget {
+        min-height: 420px;
+    }
+}
